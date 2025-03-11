@@ -1,5 +1,5 @@
 baseURL: "https://examplesite.com/"
-title: ExampleSite
+title: pjcblog
 pagination:
   pagerSize: 5
 theme: PaperMod
@@ -72,9 +72,9 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
-
+    Title: "加油的每一天"
+    Content: 努力奋斗，不断进步！
+    
   socialIcons:
     - name: x
       url: "https://x.com/"
