@@ -74,3 +74,13 @@
 .toc li a:hover {
     color: var(--secondary);
 }
+
+/* ========== 正文字体：落霞孤鹜 ========== */
+body {
+    font-family: "LXGW WenKai Lite", sans-serif !important;
+}
+
+/* ========== 代码字体：JetBrains Mono ========== */
+code {
+    font-family: "JetBrains Mono", "LXGW WenKai Screen", "LXGW WenKai Lite", sans-serif;
+}
