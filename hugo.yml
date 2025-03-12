@@ -1,35 +1,54 @@
 baseURL: "https://pjc01.cn/"
 title: pjcblog
 pagination:
-  pagerSize: 5
+  pagerSize: 15
 theme: PaperMod
+languageCode: "zh-cn"  # 网站的默认语言代码
 
-enableRobotsTXT: true
+# languageCode: zh
+# defaultContentLanguage: zh
+
+enableInlineShortcodes: true  # 启用内联短代码
+enableEmoji: true  # 启用Emoji表情支持
+enableRobotsTXT: true  # 生成 robots.txt 文件
+hasCJKLanguage: true  # 启用CJK语言支持
+
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+
+summaryLength: 140  # 文章概要显示的字数
 
 minify:
   disableXML: true
   minifyOutput: true
 
+defaultContentLanguage: "zh-cn"  # 默认内容语言代码
+languages:
+  zh-cn:
+    languageName: "简中"  # 语言显示名称
+    weight: 1  # 权重，决定语言的显示顺序
+    params:
+      homeInfoParams:
+        Title: "欢迎来到我的个人博客！"
+        Content: >
+          ## 总得写点什么吧          
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: ExampleSite
   description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
+  DateFormat: "2006-01-02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowReadingTime: true  # 显示阅读时间
+  ShowShareButtons: false  # 显示分享按钮
+  ShowPostNavLinks: true  # 显示文章导航链接
+  ShowBreadCrumbs: true  # 显示面包屑导航
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -40,6 +59,7 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: true
+  ShowCodeCopyButtons: true  # 显示代码复制按钮
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -114,22 +134,22 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: "search"
+      name: "🔍 搜索"
+      url: "search"
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: "posts"
+      name: "📝 文章"
+      url: "posts"
       weight: 30
-    - identifier: blog
-      name: blog
-      url: blog
-      weight: 40
+    - identifier: "archives"
+      name: "📅 归档"
+      url: "archives"
+      weight: 50
+    - identifier: "about"
+      name: "🎯 关于"
+      url: "about"
+      weight: 60
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
@@ -140,3 +160,24 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"  # 用于搜索功能
+
+params:
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary"]
+
+params:
+  comments: false  # 全局评论开关
+  Twikoo:
+    envId: "https://rongzl-twikoo.hf.space"  # Twikoo环境ID
