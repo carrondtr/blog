@@ -30,9 +30,11 @@ languages:
     weight: 1  # 权重，决定语言的显示顺序
     params:
       homeInfoParams:
-        Title: "欢迎来到我的个人博客！"
+        Title: "加油的每一天!!!"
         Content: >
-          ## 总得写点什么吧          
+          ## 努力奋斗，不断进步！
+
+          ## 记录点滴收获！          
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -64,11 +66,11 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+    favicon: "imgs/favicon.ico"
+    favicon16x16: "imgs/favicon.ico"
+    favicon32x32: "imgs/favicon.ico"
+    # apple_touch_icon: "<link / abs url>"
+    # safari_pinned_tab: "<link / abs url>"
 
   label:
     text: "Home"
@@ -91,9 +93,6 @@ params:
         url: tags
 
   # home-info mode
-  homeInfoParams:
-    Title: "加油的每一天"
-    Content: 努力奋斗，不断进步！
     
   socialIcons:
     - name: x
@@ -140,7 +139,7 @@ menu:
       weight: 10
     - identifier: "posts"
       name: "📝 文章"
-      url: "posts"
+      url: "post"
       weight: 30
     - identifier: "archives"
       name: "📅 归档"
