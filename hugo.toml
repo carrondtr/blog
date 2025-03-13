@@ -2,7 +2,7 @@
 baseURL = 'https://pjc01.cn'
 languageCode = 'zh-cn'
 title = 'pjcblog'
-theme = 'PaperMod'
+theme = ["hugo-notice", "PaperMod"]
 
 cleanDestinationDir = true
 enableEmoji = true              # 允许使用Emoji表情
@@ -48,12 +48,6 @@ defaultContentLanguage = "zh"
     weight = 980
     identifier = "posts"
     url = "/posts"
-[[menu.main]]
-    name = "专栏"
-    pre = "<i class='fa fa-book'></i>"
-    weight = 990
-    identifier = "series"
-    url = "/series"
 [[menu.main]]
     name = "友链"
     weight = 1000
