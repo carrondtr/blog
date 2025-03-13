@@ -35,31 +35,32 @@ defaultContentLanguage = "zh"
     pre = "<i class='fa fa-search'></i>"
     weight = 960
     identifier = "search"
-    url = "/search"
+    url = "search"
+[[menu.main]]
+    name = "归档"
+    pre = "<i class='fa fa-archive'></i>"
+    weight = 970
+    identifier = "archives"
+    url = "archives"
 [[menu.main]]
     name = "文章"
     pre = "<i class='fa fa-list'></i>"
-    weight = 970
+    weight = 980
     identifier = "posts"
     url = "/posts"
 [[menu.main]]
     name = "专栏"
     pre = "<i class='fa fa-book'></i>"
-    weight = 980
+    weight = 990
     identifier = "series"
     url = "/series"
 [[menu.main]]
     name = "友链"
-    pre = "<i class='fa fa-link'></i>"
-    weight = 990
+    weight = 1000
     identifier = "links"
     url = "/links"
-[[menu.main]]
-    name = "关于"
-    pre = "<i class='fa fa-info-circle'></i>"
-    weight = 1000
-    identifier = "about"
-    url = "/about"
+
+
 
 [[permalinks]]
     post = "/post/:section/:slug/"  # 链接格式
